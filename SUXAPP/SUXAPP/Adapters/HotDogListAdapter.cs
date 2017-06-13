@@ -54,21 +54,39 @@ namespace SUXAPP.Adapters
         {
             var item = items[position];
 
-            var imageBitmap = ImageHelper.GetImageBitmapFromUrl("http://softuni.bg");
+            //first demo
+            //if (convertView == null)
+            //{
+            //    convertView = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItem1, null);
+            //}
+            //convertView.FindViewById<TextView>(Android.Resource.Id.Text1).Text = item.Name;
+            //return convertView;
+
+
+            //built-in template demo
+            //var imageBitmap = ImageHelper.GetImageBitmapFromUrl("http://gillcleerenpluralsight.blob.core.windows.net/files/" + item.ImagePath + ".jpg");
+
+            //if (convertView == null)
+            //{
+            //    convertView = context.LayoutInflater.Inflate(Android.Resource.Layout.ActivityListItem, null);
+            //}
+            //convertView.FindViewById<TextView>(Android.Resource.Id.Text1).Text = item.Name;
+            //convertView.FindViewById<ImageView>(Android.Resource.Id.Icon).SetImageBitmap(imageBitmap);
+
+            //return convertView;
+
+            //custom row view demo
+            var imageBitmap = ImageHelper.GetImageBitmapFromUrl("http://gillcleerenpluralsight.blob.core.windows.net/files/" + item.ImagePath + ".jpg");
 
             if (convertView == null)
             {
-                convertView = 
-                    context.LayoutInflater.Inflate(Resource.Layout.HotDogRowView,null);
+                convertView = context.LayoutInflater.Inflate(Resource.Layout.HotDogRowView, null);
             }
-            convertView.FindViewById<TextView>(Resource.Id.hotDogNameTextView)
-                .Text = item.Name;
-            convertView.FindViewById<TextView>(Resource.Id.shortDescriptionTextView)
-                .Text = item.ShortDescription;
-            convertView.FindViewById<TextView>(Resource.Id.priceTextView)
-                .Text ="$" + item.Price;
-            convertView.FindViewById<ImageView>(Resource.Id.hotDogImageView)
-                .SetImageBitmap(imageBitmap);
+
+            convertView.FindViewById<TextView>(Resource.Id.hotDogNameTextView).Text = item.Name;
+            convertView.FindViewById<TextView>(Resource.Id.shortDescriptionTextView).Text = item.ShortDescription;
+            convertView.FindViewById<TextView>(Resource.Id.priceTextView).Text = "$ " + item.Price;
+            convertView.FindViewById<ImageView>(Resource.Id.hotDogImageView).SetImageBitmap(imageBitmap);
 
             return convertView;
         }

@@ -19,7 +19,7 @@ namespace SUXAPP
     public class HotDogMenuActivity : Activity
     {
 
-        private ListView hotDogListView;
+        public ListView hotDogListView;
         private List<HotDog> allHotDogs;
         private HotDogDataService hotDogDataService;
         protected override void OnCreate(Bundle savedInstanceState)
@@ -32,7 +32,7 @@ namespace SUXAPP
 
             hotDogListView = FindViewById<ListView>(Resource.Id.hotDogListView);
             hotDogDataService = new HotDogDataService();
-            allHotDogs = hotDogDataService.GetAllHotDogs(); 
+            allHotDogs = hotDogDataService.GetAllHotDogs();
 
             hotDogListView.Adapter = new HotDogListAdapter(this, allHotDogs);
             hotDogListView.FastScrollEnabled = true;
