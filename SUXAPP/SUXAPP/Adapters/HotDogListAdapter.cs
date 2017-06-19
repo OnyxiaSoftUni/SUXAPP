@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,17 +14,15 @@ using SUXAPP.Utility;
 
 namespace SUXAPP.Adapters
 {
-   public class HotDogListAdapter : BaseAdapter<HotDog>
+    public class HotDogListAdapter : BaseAdapter<HotDog>
     {
-        List<HotDog> items;
-        Activity context;
-
+        private List<HotDog> items;
+        private Activity context;
 
         public HotDogListAdapter(Activity context, List<HotDog> items) : base()
         {
             this.context = context;
             this.items = items;
-
         }
 
         public override long GetItemId(int position)
@@ -38,7 +36,6 @@ namespace SUXAPP.Adapters
             {
                 return items[position];
             }
-
         }
 
         public override int Count
@@ -47,35 +44,12 @@ namespace SUXAPP.Adapters
             {
                 return items.Count;
             }
-
         }
 
         public override View GetView(int position, View convertView, ViewGroup parent)
         {
             var item = items[position];
 
-            //first demo
-            //if (convertView == null)
-            //{
-            //    convertView = context.LayoutInflater.Inflate(Android.Resource.Layout.SimpleListItem1, null);
-            //}
-            //convertView.FindViewById<TextView>(Android.Resource.Id.Text1).Text = item.Name;
-            //return convertView;
-
-
-            //built-in template demo
-            //var imageBitmap = ImageHelper.GetImageBitmapFromUrl("http://gillcleerenpluralsight.blob.core.windows.net/files/" + item.ImagePath + ".jpg");
-
-            //if (convertView == null)
-            //{
-            //    convertView = context.LayoutInflater.Inflate(Android.Resource.Layout.ActivityListItem, null);
-            //}
-            //convertView.FindViewById<TextView>(Android.Resource.Id.Text1).Text = item.Name;
-            //convertView.FindViewById<ImageView>(Android.Resource.Id.Icon).SetImageBitmap(imageBitmap);
-
-            //return convertView;
-
-            //custom row view demo
             var imageBitmap = ImageHelper.GetImageBitmapFromUrl("http://gillcleerenpluralsight.blob.core.windows.net/files/" + item.ImagePath + ".jpg");
 
             if (convertView == null)

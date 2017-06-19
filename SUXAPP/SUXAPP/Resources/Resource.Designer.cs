@@ -73,16 +73,13 @@ namespace SUXAPP
 		{
 			
 			// aapt resource value: 0x7f05000d
-			public const int Mybutton = 2131034125;
+			public const int MyButton = 2131034125;
 			
-			// aapt resource value: 0x7f050013
-			public const int aboutButton = 2131034131;
+			// aapt resource value: 0x7f050012
+			public const int aboutButton = 2131034130;
 			
 			// aapt resource value: 0x7f05000a
 			public const int amountEditText = 2131034122;
-			
-			// aapt resource value: 0x7f05000e
-			public const int button1 = 2131034126;
 			
 			// aapt resource value: 0x7f050000
 			public const int callTextView = 2131034112;
@@ -90,8 +87,8 @@ namespace SUXAPP
 			// aapt resource value: 0x7f050009
 			public const int cancelButton = 2131034121;
 			
-			// aapt resource value: 0x7f050010
-			public const int cartButton = 2131034128;
+			// aapt resource value: 0x7f05000f
+			public const int cartButton = 2131034127;
 			
 			// aapt resource value: 0x7f050007
 			public const int descriptionTextView = 2131034119;
@@ -108,14 +105,14 @@ namespace SUXAPP
 			// aapt resource value: 0x7f050005
 			public const int hotDogNameTextView = 2131034117;
 			
-			// aapt resource value: 0x7f05000f
-			public const int logoImageView = 2131034127;
+			// aapt resource value: 0x7f05000e
+			public const int logoImageView = 2131034126;
 			
 			// aapt resource value: 0x7f050003
 			public const int mainScrollView = 2131034115;
 			
-			// aapt resource value: 0x7f050012
-			public const int mapButton = 2131034130;
+			// aapt resource value: 0x7f050011
+			public const int mapButton = 2131034129;
 			
 			// aapt resource value: 0x7f05000b
 			public const int orderButton = 2131034123;
@@ -129,8 +126,8 @@ namespace SUXAPP
 			// aapt resource value: 0x7f050006
 			public const int shortDescriptionTextView = 2131034118;
 			
-			// aapt resource value: 0x7f050011
-			public const int takePictureButton = 2131034129;
+			// aapt resource value: 0x7f050010
+			public const int takePictureButton = 2131034128;
 			
 			static Id()
 			{

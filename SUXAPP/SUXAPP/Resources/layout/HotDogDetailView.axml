@@ -13,13 +13,12 @@
         android:paddingLeft="20dp"
         android:paddingRight="20dp">
         <ImageView
-            android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:id="@+id/hotDogImageView"
             android:layout_gravity="center_horizontal" />
         <TextView
-            android:text="Hot dog name"
+            android:text="Hot Dog Name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/hotDogNameTextView"

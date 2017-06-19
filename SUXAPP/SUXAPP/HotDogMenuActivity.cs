@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,25 +9,23 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using SUXAPP.Core.Model;
 using SUXAPP.Core.Service;
+using SUXAPP.Core.Model;
 using SUXAPP.Adapters;
 using SUXAPP.Fragments;
 
 namespace SUXAPP
 {
-    [Activity(Label = "HotDogMenuActivity", MainLauncher = true)]
+    [Activity(Label = "HotDogMenuActivity")]
     public class HotDogMenuActivity : Activity
     {
-
-        public ListView hotDogListView;
+        private ListView hotDogListView;
         private List<HotDog> allHotDogs;
         private HotDogDataService hotDogDataService;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
-            // Create your application here
 
             SetContentView(Resource.Layout.HotDogMenuView);
 
@@ -52,7 +50,7 @@ namespace SUXAPP
                 e.FragmentTransaction.Add(Resource.Id.fragmentContainer, view);
             };
 
-            tab.TabUnselected += delegate(object sender, ActionBar.TabEventArgs e)
+            tab.TabUnselected += delegate (object sender, ActionBar.TabEventArgs e)
             {
                 e.FragmentTransaction.Remove(view);
             };
@@ -67,9 +65,7 @@ namespace SUXAPP
             var intent = new Intent();
             intent.SetClass(this, typeof(HotDogDetailActivity));
             intent.PutExtra("selectedHotDogId", hotDog.HotDogId);
-
             StartActivityForResult(intent, 100);
-
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)

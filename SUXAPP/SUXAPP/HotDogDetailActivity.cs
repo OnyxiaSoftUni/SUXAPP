@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +15,7 @@ using SUXAPP.Utility;
 
 namespace SUXAPP
 {
-    [Activity(Label = "Hot dog detail", MainLauncher = true)]
+    [Activity(Label = "Hotdog details")]
     public class HotDogDetailActivity : Activity
     {
         private ImageView hotDogImageView;
@@ -33,6 +33,8 @@ namespace SUXAPP
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+
+            // Create your application here
 
             SetContentView(Resource.Layout.HotDogDetailView);
 
@@ -85,6 +87,13 @@ namespace SUXAPP
         private void OrderButton_Click(object sender, EventArgs e)
         {
             var amount = Int32.Parse(amountEditText.Text);
+
+            // add add to cart functionality here as well
+
+            //var dialog = new AlertDialog.Builder(this);
+            //dialog.SetTitle("Confirmation");
+            //dialog.SetMessage("Your hot dog has been added to your cart!");
+            //dialog.Show();
 
             var intent = new Intent();
             intent.PutExtra("selectedHotDogId", selectedHotDog.HotDogId);

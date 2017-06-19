@@ -1,10 +1,16 @@
-﻿using Android.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Text;
-using System.Threading.Tasks;
+
+using Android.App;
+using Android.Content;
+using Android.OS;
+using Android.Runtime;
+using Android.Views;
+using Android.Widget;
+using Android.Graphics;
+using System.Net;
 
 namespace SUXAPP.Utility
 {

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace SUXAPP
 {
-    [Activity(Label = "MenuActivity",MainLauncher = true)]
+    [Activity(Label = "MenuActivity", MainLauncher = true)]
     public class MenuActivity : Activity
     {
         private Button orderButton;
@@ -20,6 +20,7 @@ namespace SUXAPP
         private Button aboutButton;
         private Button mapButton;
         private Button takePictureButton;
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
