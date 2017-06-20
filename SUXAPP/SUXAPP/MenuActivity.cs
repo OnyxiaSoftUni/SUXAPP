@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace SUXAPP
 {
-    [Activity(Label = "MenuActivity", MainLauncher = true)]
+    [Activity(Label = "SUXAPP Menu", MainLauncher = true, Icon = "@drawable/smallicon")]
     public class MenuActivity : Activity
     {
         private Button orderButton;
@@ -43,7 +43,16 @@ namespace SUXAPP
         private void HandleEvents()
         {
             orderButton.Click += OrderButton_Click;
+            cartButton.Click += CartButton_Click;
             aboutButton.Click += AboutButton_Click;
+            takePictureButton.Click += TakePictureButton_Click;
+            mapButton.Click += MapButton_Click;
+        }
+
+        private void TakePictureButton_Click(object sender, EventArgs e)
+        {
+            var intent = new Intent(this, typeof(TakePictureActivity));
+            StartActivity(intent);
         }
 
         private void AboutButton_Click(object sender, EventArgs e)
@@ -55,6 +64,18 @@ namespace SUXAPP
         private void OrderButton_Click(object sender, EventArgs e)
         {
             var intent = new Intent(this, typeof(HotDogMenuActivity));
+            StartActivity(intent);
+        }
+
+        private void MapButton_Click(object sender, EventArgs e)
+        {
+            var intent = new Intent(this, typeof(RayMapActivity));
+            StartActivity(intent);
+        }
+
+        private void CartButton_Click(object sender, EventArgs e)
+        {
+            var intent = new Intent(this, typeof(CartActivity));
             StartActivity(intent);
         }
     }
